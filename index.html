@@ -72,8 +72,7 @@
     <section id="home" class="hero-section">
         <div class="container">
           <div class="row align-items-center min-vh-100">
-            <div class="col-md-6 text-white">
-              <h2 class="h5 mb-3">Hi, I'm John Watson</h2>
+            <div class="col-md-6 text-white content-block">              <h2 class="h5 mb-3">Hi, I'm John Watson</h2>
               <h1 class="display-4 fw-bold mb-4">Web Designer</h1>
               <p class="lead mb-5">
                 I love Graphic design and Photography and have been working on my portfolio since 2016. I can give your business a new Creative start right away!
@@ -84,7 +83,9 @@
               </div>
             </div>
             <div class="col-md-6">
-              <img src="Assets/John-Watson.png" alt="John Watson" class="img-fluid rounded">
+                <div class="image-3d-container">
+                    <img src="Assets/John-Watson.png" alt="John Watson" class="img-fluid rounded hero-image">
+                </div>
             </div>
           </div>
         </div>
@@ -95,7 +96,7 @@
         <div class="container">
           <div class="row align-items-center g-5">
             <div class="col-md-6">
-              <img src="Assets/Jonny-Watson-2.png" alt="John Watson Profile" class="img-fluid rounded">
+                <img src="Assets/Jonny-Watson-2.png" alt="John Watson Profile" class="img-fluid rounded">
             </div>
             <div class="col-md-6">
               <span class="text-primary text-uppercase fw-medium">MY BIOGRAPHY</span>
@@ -277,20 +278,29 @@
   
           <div class="row g-4">
             <div class="col-md-4">
-              <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Modern Workspace" class="img-fluid">
-              </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-item">
+                      <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Modern Workspace" class="img-fluid">
+                      <div class="portfolio-overlay">
+                        <h4>Modern Workspace</h4>
+                        <p>UI/UX Design</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
             <div class="col-md-4">
-              <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Development Setup" class="img-fluid">
-              </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-item">
+                      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Development Setup" class="img-fluid">
+                      <div class="portfolio-overlay">
+                        <h4>Development Setup</h4>
+                        <p>Web Development</p>
+                      </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-              <div class="portfolio-item">
-                <img src="https://images.unsplash.com/photo-1595754478284-81a6626cbc80" alt="Minimalist Office" class="img-fluid">
-              </div>
-            </div>
+            
           </div>
   
           <div class="clients-section bg-primary text-white mt-5 p-5 rounded">
@@ -358,9 +368,5 @@
         </div>
       </footer>
   
-      <!-- Bootstrap JS -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-      <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-      <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     </body>
   </html>
