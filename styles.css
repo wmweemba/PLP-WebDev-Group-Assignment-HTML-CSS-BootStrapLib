@@ -20,32 +20,106 @@
   
   /* Hero Section */
   .hero-section {
-    background-color: var(--teal);
-    min-height: 100vh;
+    background: linear-gradient(rgba(21, 45, 53, 0.8), rgba(21, 45, 53, 0.8)), 
+                url('/Assets/coffee_notebook.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    perspective: 1000px;
-}
+    min-height: 100vh;
+  }
 
-.content-block {
-  transform: translateZ(50px);
-  transition: transform 0.3s ease;
-}
+  .hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
 
-.image-3d-container {
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
+  .hero-section h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
 
-.hero-image {
-  transform: rotateY(-15deg) rotateX(5deg);
-  transition: transform 0.5s ease;
-  box-shadow: 20px 20px 50px rgba(0,0,0,0.3);
-}
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    line-height: 1.6;
+  }
 
-.hero-image:hover {
-  transform: rotateY(0deg) rotateX(0deg);
-}
+  .hero-section .btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  /* General Button Styles */
+  .btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  .btn:hover::before {
+    left: 100%;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #008f7a;
+  }
+
+  /* Outline Light Button */
+  .btn-outline-light {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+
+  .btn-outline-light:hover {
+    background-color: white;
+    color: var(--teal);
+  }
+
+  /* Additional Button Variants (if needed) */
+  .btn-secondary {
+    background-color: var(--teal);
+    color: white;
+    border: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: #12302f;
+  }
   
   /* Service Cards */
   .service-card {
@@ -152,30 +226,76 @@
   
   /* Enhanced Footer */
   .footer {
-    background-color: var(--teal);
-    color: white;
-    position: relative;
-    overflow: hidden;
+    background-color: #0d1b2a; /* Dark background for footer */
+    color: #ffffff; /* White text color */
+    padding: 3rem 0;
   }
-  
-  .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at top right, rgba(255,255,255,0.1) 0%, transparent 60%);
+
+  .footer a {
+    color: #00a78e; /* Primary color for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
-  
-  .social-links a {
-    transition: all 0.3s ease;
-    display: inline-block;
+
+  .footer a:hover {
+    color: #008f7a; /* Slightly darker shade on hover */
   }
-  
-  .social-links a:hover {
-    color: var(--primary) !important;
-    transform: translateY(-3px);
+
+  .footer .contact-info {
+    font-size: 0.9rem;
+  }
+
+  .footer .contact-info i {
+    color: #00a78e; /* Icon color */
+    margin-right: 0.5rem;
+  }
+
+  .footer .social-links a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+
+  .footer .social-links a:hover {
+    color: #00a78e; /* Hover effect for social icons */
+  }
+
+  .footer hr {
+    border-color: rgba(255, 255, 255, 0.2); /* Light border for separation */
+  }
+
+  .footer p {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  .footer .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer .logo i {
+    margin-right: 0.5rem;
+    color: #00a78e;
+  }
+
+  .footer .clients-section {
+    background-color: #00a78e; /* Green background for client logos */
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .footer .clients-section img {
+    max-width: 120px;
+    margin: 0 1rem;
+    filter: brightness(0) invert(1); /* White logo effect */
+  }
+
+  .footer .clients-section img:hover {
+    filter: brightness(1); /* Original color on hover */
   }
   
   /* Mobile Responsive Adjustments */
@@ -239,4 +359,155 @@
   .btn-primary:hover::before, .btn-outline-light:hover::before {
     left: 100%;
   }
-  
+
+  /* My Biography Section */
+  .biography-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    background-color: var(--gray-light);
+  }
+
+  .biography-section .bio-image {
+    flex: 1;
+    max-width: 40%;
+    text-align: center;
+  }
+
+  .biography-section .bio-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+
+  .biography-section .bio-content {
+    flex: 2;
+    max-width: 55%;
+    padding: 1rem 2rem;
+  }
+
+  .biography-section .bio-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--teal);
+  }
+
+  .biography-section .bio-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+
+  .biography-section .bio-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .biography-section .bio-details div {
+    flex: 1;
+    min-width: 200px;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  .biography-section .bio-details div span {
+    font-weight: 700;
+    color: #000;
+  }
+
+  .biography-section .bio-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .biography-section .bio-buttons .btn {
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .biography-section .bio-buttons .btn-primary {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+  }
+
+  .biography-section .bio-buttons .btn-primary:hover {
+    background-color: #008f7a;
+  }
+
+  .biography-section .bio-buttons .btn-outline-light {
+    background: transparent;
+    color: var(--teal);
+    border: 2px solid var(--teal);
+  }
+
+  .biography-section .bio-buttons .btn-outline-light:hover {
+    background-color: var(--teal);
+    color: white;
+  }
+
+  /* Center the Skills Section */
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Centers the content horizontally */
+    text-align: center; /* Centers text inside the section */
+    gap: 2rem; /* Adds spacing between items */
+  }
+
+  .skills-section .col-md-6 {
+    flex: 1; /* Ensures equal width for columns */
+    max-width: 45%; /* Limits the width of each column */
+  }
+
+  .skills-section img {
+    margin: 0 auto; /* Centers the images */
+    display: block; /* Ensures proper centering */
+  }
+
+  .skills-section p {
+    text-align: left; /* Aligns text to the left for readability */
+  }
+
+  .skills {
+    margin-top: 2rem;
+  }
+
+  /* Services Section */
+  .services-section {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 3rem 0;
+  }
+
+  .services-section .service-item {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .services-section .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .services-section .service-item i {
+    color: var(--primary);
+  }
+
+  .services-section img {
+    max-width: 80%; /* Adjust image size */
+    margin: 0 auto;
+    display: block;
+  }
