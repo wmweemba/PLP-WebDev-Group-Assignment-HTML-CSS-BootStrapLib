@@ -1,5 +1,11 @@
 # PLP-WebDev-Group-Assignment-HTML-CSS-BootStrapLib
 
+Assignment Submission by:
+
+1. Leonard Boma - leonardboma@gmail.com
+2. William Mweemba - wmweemba@gmail.com
+3. Delron Kwenyu - kweyudelron37@gmail.com
+
 # Web Development Group 
 
 ## 📜 Rules & Guidelines
